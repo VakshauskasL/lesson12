@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form accept-charset="utf-8" action="mailto:test@test.test"
+    autocomplete="off"metod="post"name="login" novalidate target="_blank" id= "form1">
+    <!--принимает путь к обработчику
+    enctype=""
+    multipart/form-data-при отправке файла
+    text/plane- обычный текст,но не html/отправка текста
+    method=get,post.
+
+
+-->
+
+<fieldset disabled form="form1" name="contacts">
+    <legend>Контактная форма</legend>
+    <p>
+    <label for="name">Имя<em>*</em>
+    <input type="text"id ="name">
+    </label></p>
+    <p><label for="email">E-mail</label></p>
+    <input type="email"id="email"></p>
+</fieldset>
+<input type="button" value="Привет">
+<input type="checkbox">
+<label><input type="checkbox">Нажми на меня</label>
+<input type="color" name="color">
+<input type="date">
+<input type="datetime-local">
+<input type="time">
+<input type="week">
+<input type="email" value="text@text.text">
+<input type="file" accept="audio">
+<!--
+    accept=".exe-только этот тип файла
+            audio
+-->
+<input type="month">
+<input type="number" min="0"max="10"step="2">
+<input type="text"autocomplete="on" autofocus placeholder="текст">
+<input type="password">
+<input type="radio">
+<!--Поддерживается radio и checkbox
+checked-->
+<input type="range" min="0"max="100">
+<input type="reset">
+<input type="search">
+<input type="submit"disabled>
+<input type="url">
+<input type="image" alt="Пуск" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"><!--можно задать высоту и ширину-->
+<input type="hidden" value="Скрытое значение" name="hidden"><!--для передачи скрытых данных-->
+
+<!--
+    Общие атрибуты
+    autocomlete - on, off.вкл/выкл по умолчанию вкл
+    autofocus-при загрузке стр автоматически появляется бегунок.
+    disabled
+    form=""при отправки формы
+    name="" для всех полей обязательно и должно быть уникально обязательный атирибут!!!!!!!
+    value=""
+    readonly - мы не можем изменить значение
+    required- становится обязательным к заполнению
+
+
+    Поддерживается number range date datetime datetime-local month time week 
+    max="10"
+    min="-5" 
+    для даты max="2019-09-10" min="22:10"
+
+
+    Текстовые поля 
+    maxlength="10"
+    placeholder="текст"
+    size="5"
+
+
+
+
+    Поле ввода email и file 
+    multiple-позволяет добавить несколько файлов или почт чекрез запятую
+
+
+-->
+
+<p><input type="submit" value="Отправить"></p>
+
+    
+
+</form>
+<form>
+    <input type="text"pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+    placeholder="000-000-0000">
+
+    <input type="email"size="5">
+    <textarea rows="10"cols="5" placeholder="123"> 
+     текст
+    </textarea><!--аналог импут текст состоит из 2-х строк-->
+    <!--autofocus
+    disabled
+    form=""
+    maxlength=""
+    name=""
+    placeholder=""
+    readonly=""
+    required
+    wrap="" hard -сохраняет или не сохраняет переносы строк
+            soft- не будет сохранят переносы строк
+-->
+    <input type ="submit">
+    <select name ="list" multiple> <!--multiple-несколько значений редко используется-->
+        <!--выпадающий список-->
+        <option>Выберите</option>
+        <option value="один">1</option> <!--у value вес больше будет передаватся один,если нет вел ю передается 1-->
+        <option label="2">dngfekdvkdnvkdnevkedk</option><!--отображается 2-->
+        <option>3</option>
+        <option disabled>4</option><!--неактивна-->
+        <option>5</option>
+        <optgroup label="Подпункты"disabled><!--disabled-для js не активная-->
+            <option>6</option>
+            <option>7</option>
+        </optgroup>
+    </select>
+    <button class="button" type="submit" formmethod="GET">
+    hkhno
+    </button>
+    <label><input type="radio"name="option">Пункт1</label>
+    <label><input type="radio"name="option">Пункт2</label>
+    <label><input type="radio"name="option">Пункт3</label><!--будет выбран один так как одно имя считается группой-->
+    
+
+
+
+    <input type ="submit">
+    <!--патерн-маска  поле телефона +38 проверет количество символов, запрещает вводить буквы,ограничивает количество цыфр
+    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  -->
+
+</form>
+    
+</body>
+</html>
